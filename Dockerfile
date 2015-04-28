@@ -4,3 +4,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		emacs24-nox \
 		golang \
 	&& rm -rf /var/lib/apt/lists/*
+
+ENV GOPATH $HOME/go
+
+RUN go get -v github.com/spf13/hugo
