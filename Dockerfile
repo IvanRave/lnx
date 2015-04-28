@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		golang \
 	&& rm -rf /var/lib/apt/lists/*
 
-ENV GOPATH="$HOME/go"
+ENV GOPATH="/root/go"
 
 RUN go get github.com/tools/godep
 
