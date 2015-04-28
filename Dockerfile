@@ -5,6 +5,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		golang \
 	&& rm -rf /var/lib/apt/lists/*
 
-ENV GOPATH $HOME/go
+ENV GOPATH="$HOME/go"
 
-RUN go get -v github.com/spf13/hugo
+RUN go get github.com/tools/godep
+
+RUN go get github.com/spf13/hugo
